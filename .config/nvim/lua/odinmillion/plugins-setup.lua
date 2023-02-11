@@ -106,6 +106,11 @@ return packer.startup(function(use)
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+  -- golang
+  use("ray-x/go.nvim")
+  use("ray-x/guihua.lua")
+  use("theHamsta/nvim-dap-virtual-text")
+
   use({
     "phaazon/hop.nvim",
     branch = "v2", -- optional but strongly recommended
