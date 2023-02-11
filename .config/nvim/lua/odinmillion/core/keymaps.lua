@@ -14,7 +14,7 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- delete single character without copying into register
-keymap.set("n", "x", '"_x')
+keymap.set("n", "x", "\"_x")
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
@@ -40,6 +40,9 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+
+-- hop
+keymap.set("n", "f", ":HopWord<CR>") --
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
