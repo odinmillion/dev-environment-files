@@ -110,6 +110,7 @@ return packer.startup(function(use)
   use("ray-x/go.nvim")
   use("ray-x/guihua.lua")
   use("theHamsta/nvim-dap-virtual-text")
+  use("ray-x/lsp_signature.nvim")
 
   use({
     "phaazon/hop.nvim",
