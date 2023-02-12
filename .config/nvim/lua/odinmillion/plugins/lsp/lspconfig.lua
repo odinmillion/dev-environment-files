@@ -118,3 +118,7 @@ lspconfig["gopls"].setup({
   on_attach = on_attach,
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 })
+
+-- set terminal toggling
+keymap.set("n", "<M-d>", "<cmd>Lspsaga term_toggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<M-d>", [[<C-\><C-n>:Lspsaga term_toggle<CR>]], { noremap = true, silent = true })
