@@ -38,9 +38,9 @@ treesitter.setup({
   incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "grn", -- set to `false` to disable one of the mappings
-      node_incremental = "grn",
-      node_decremental = "grm",
+      init_selection = "<A-a>", -- set to `false` to disable one of the mappings
+      node_incremental = "<A-a>",
+      node_decremental = "<A-z>",
       -- scope_incremental = "grc", -- don't use that
     },
   },

@@ -1,26 +1,26 @@
 -- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
+local telescope_setup, telescope = pcall(require, 'telescope')
 if not telescope_setup then
   return
 end
 
 -- import telescope actions safely
-local actions_setup, actions = pcall(require, "telescope.actions")
+local actions_setup, actions = pcall(require, 'telescope.actions')
 if not actions_setup then
   return
 end
 
 -- set current index in status text
-local pickers = require("telescope.pickers")
+local pickers = require('telescope.pickers')
 
 local get_status_text = function(self)
   local selected = #(self:get_multi_selection())
   local num_results = (self.stats.processed or 0) - (self.stats.filtered or 0)
   local current_index = num_results == 0 and 0 or self:get_index((self.stats.jy_current_row or 0))
   if selected ~= 0 then
-    return string.format("(Selected: %s) %s / %s", selected, current_index, num_results)
+    return string.format('(Selected: %s) %s / %s', selected, current_index, num_results)
   end
-  return string.format("%s / %s", current_index, num_results)
+  return string.format('%s / %s', current_index, num_results)
 end
 
 local original_update_prefix = pickers._Picker.update_prefix
@@ -42,8 +42,8 @@ end
 telescope.setup({
   -- configure custom mappings
   defaults = {
-    scroll_strategy = "limit",
-    layout_strategy = "vertical",
+    scroll_strategy = 'limit',
+    layout_strategy = 'vertical',
     layout_config = { height = 0.95 },
     dynamic_preview_title = true,
     wrap_results = false,
@@ -59,4 +59,4 @@ telescope.setup({
   },
 })
 
-telescope.load_extension("fzf")
+telescope.load_extension('fzf')
