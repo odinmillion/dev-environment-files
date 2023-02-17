@@ -123,6 +123,21 @@ return packer.startup(function(use)
     end,
   })
 
+  -- markdown preview
+  use({
+    'ellisonleao/glow.nvim',
+    config = function()
+      require('glow').setup()
+    end,
+  })
+
+  use({
+    'iamcco/markdown-preview.nvim',
+    run = function()
+      vim.fn['mkdp#util#install']()
+    end,
+  })
+
   if packer_bootstrap then
     require('packer').sync()
   end
