@@ -50,9 +50,10 @@ telescope.setup({
     get_status_text = get_status_text,
     mappings = {
       i = {
-        ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-        ["<C-j>"] = actions.move_selection_next, -- move to next result
-        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+        ['<C-k>'] = actions.move_selection_previous, -- move to prev result
+        ['<C-j>'] = actions.move_selection_next, -- move to next result
+        --[[        ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist ]]
+        ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
       },
     },
   },
